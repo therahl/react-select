@@ -228,7 +228,8 @@ const Select = React.createClass({
 		if (this.props.scrollMenuIntoView && this.menuContainer) {
 			var menuContainerRect = this.menuContainer.getBoundingClientRect();
 			const { scrollableParentId, menuBuffer } = this.props;
-			const container = scrollableParentId && document.getElementById(scrollableParentId);
+			// const container = scrollableParentId && document.getElementById(scrollableParentId);
+			const container = scrollableParentId;	
 
 			if (container && container.clientHeight < menuContainerRect.bottom + menuBuffer) {
 				container.scrollTop += menuContainerRect.bottom + menuBuffer - container.clientHeight;
